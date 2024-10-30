@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qoutes</title>
+    <style>
+          /* Aturan CSS untuk mengubah warna tautan menjadi biru */
+          a {
+            color: blue;
+            text-decoration: none; /* Menghilangkan garis bawah jika tidak diinginkan */
+        }
+
+        /* Menambahkan garis bawah saat tautan disorot */
+        a:hover {
+            text-decoration: underline;
+        }
+        /* CSS untuk tampilan aesthetic */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .gombal-container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            transition: 0.3s ease;
+        }
+
+        .gombal-container:hover {
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .gombal-text {
+            font-size: 1.2em;
+            color: #333333;
+            margin-bottom: 10px;
+        }
+
+        .gombal-text:hover {
+            color: #6A5ACD;
+            cursor: pointer;
+        }
+
+        .gombal-btn {
+            margin-top: 15px;
+            padding: 8px 16px;
+            background-color: #6A5ACD;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.9em;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .gombal-btn:hover {
+            background-color: #483D8B;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="gombal-container">
+        <div class="gombal-text" id="gombalText">Jika cinta adalah ibadah, maka aku ingin menjaganya dengan menjadikanmu alasan aku memperbaiki diri, agar kita bisa berjalan bersama menuju surga-Nya. 💘</div>
+        <button class="gombal-btn" onclick="gombalLagi()">Next</button>
+    </div>
+
+    <script>
+        // Array kumpulan gombalan
+        const gombalan = [
+            "Aku tidak mencari seseorang yang sempurna, tapi aku mencari seseorang yang bisa bersamaku dalam memperbaiki diri menuju ridho-Nya. Karena denganku, insya Allah, kita menuju surga bersama. ✨",
+            "Memandangmu mengingatkanku pada kebesaran Allah. Kalau secuil ciptaan-Nya seindah ini, apalagi yang menciptakannya. 🌌✨",
+            "Aku tak minta kamu sempurna, karena Allah menciptakan kita untuk saling melengkapi kekurangan. Bersamamu, aku ingin sama-sama belajar menjadi hamba yang lebih baik. 🌕💫",
+            "Cinta yang kita bangun mungkin belum sempurna, tapi insya Allah, kalau kita sandarkan kepada-Nya, cinta ini akan abadi dan penuh barokah. 📸💕",
+            "Aku ingin jadi pendampingmu, yang setiap malam tak lupa menyebut namamu dalam doa, semoga Allah meridhoi kita hingga bertemu di Jannah-Nya 📖💖",
+            "Bersamamu, aku ingin bukan hanya sekadar berjanji, tapi sama-sama berdoa dan berusaha agar kita bisa bersama dalam ketakwaan di dunia dan akhirat. 📶❤️"
+        ];
+
+        // Fungsi untuk mengganti gombalan
+        function gombalLagi() {
+            const randomIndex = Math.floor(Math.random() * gombalan.length);
+            document.getElementById("gombalText").innerText = gombalan[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
